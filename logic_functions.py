@@ -110,7 +110,10 @@ def get_books_by_author(books, author):
     for book in books:
         if book['author'].lower() == author.lower():
             books_list.append(book)
-    return books_list
+    if not books_list:
+        return 'author not founded'
+    else:
+        return books_list
     
 def play_book_by_author():
     author = valid_str('Enter the author name: ')
