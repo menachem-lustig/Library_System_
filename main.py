@@ -36,7 +36,7 @@ def main():
         elif choice == '5':
             play_return_book()
         elif choice == '6':
-            print(get_available_books())
+            get_available_books()
         elif choice == '7':
             play_book_by_author()
         elif choice == '8':

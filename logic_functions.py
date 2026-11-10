@@ -94,18 +94,16 @@ def return_book(books, book_id):
     
 def play_return_book():
     book_id = valid_int('Enter book id: ')
-    borrow_book_check = borrow_book(books,book_id)
+    borrow_book_check = return_book (books,book_id)
     if borrow_book_check:
         print('The book returned successfully')
     else:
         print('cannot return this book')
 
 def get_available_books():
-    available_books = []
-    for book in books:
-        if book['available']:
-            available_books.append(book)
-    return available_books
+    available_books = [book for book in books  if book['available']]
+    for book in available_books:
+        print(book)
 
 def get_books_by_author(books, author):
     books_list = []
